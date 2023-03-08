@@ -1,0 +1,283 @@
+.container-info {
+  display: flex;
+  flex-direction: column;
+  color: black;
+  padding: 1rem;
+  max-height: 400px;
+  max-width: 500px;
+  min-width: 500px;
+  border-radius: 20px;
+  margin: 10px;
+  box-shadow: 0 0 4px 3px black;
+}
+.selector::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.selector {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.selector {
+  padding: 0px;
+  margin: 0px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 15px;
+  /* overflow: scroll; */
+  height: auto;
+  border-width: 1.5px;
+  border-style: solid;
+  border-color: black;
+  border-radius: 5px 5px 5px 5px;
+  background-image: linear-gradient(
+    to bottom,
+    #ffeeee 0%,
+    #ffeeee 50%,
+    #c5b7b7 100%
+  );
+}
+.container-info:hover {
+  box-shadow: 0 0 4px 3px #6db966;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: space-between;
+  margin: -40px 0px;
+}
+
+.img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+}
+.title-style {
+  color: black;
+}
+a:hover {
+  color: blue;
+  text-decoration: underline;
+}
+a {
+  text-decoration: none;
+}
+.button {
+  color: black;
+  font-size: 20px;
+  border-radius: 5px;
+  border: 2px solid white;
+  margin: 3px 2px;
+  transition-duration: 0.4s;
+  box-shadow: 0px 0px 2px 2px rgb(0, 0, 0);
+}
+.button:hover {
+  background-color: #93b5c6; /* Green */
+  color: white;
+}
+
+.moreinfo {
+  background-color: transparent;
+  color: blue;
+  border: 0;
+  animation: 3s ease-in 1s infinite reverse both running slidein;
+}
+.moreinfo:hover {
+  text-decoration: underline;
+}
+.shareinfo {
+  background-color: transparent;
+  animation-name: expandshare;
+  animation-duration: 0.25s;
+  border-radius: 20px;
+}
+@keyframes expandshare {
+  0% {
+    height: 0px;
+    font-size: 15px;
+  }
+  25% {
+    height: 37.5;
+    font-size: 12px;
+  }
+  50% {
+    height: 75px;
+    font-size: 8px;
+  }
+  75% {
+    height: 117.5px;
+    font-size: 5px;
+  }
+  100% {
+    height: 150px;
+    font-size: 0px;
+  }
+}
+.shareinfo:active {
+  transition: none;
+  animation: rotate(90deg);
+}
+
+@keyframes example {
+  0% {
+    height: 0px;
+    font-size: 0px;
+  }
+  25% {
+    height: 37.5;
+    font-size: 5px;
+  }
+  50% {
+    height: 75px;
+    font-size: 8px;
+  }
+  75% {
+    height: 117.5px;
+    font-size: 12px;
+  }
+  100% {
+    height: 150px;
+    font-size: 15px;
+  }
+}
+.summary {
+  animation-name: example;
+  animation-duration: 0.25s;
+}
+
+.option-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.semicircle {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.sharecontainer {
+  display: grid;
+}
+
+.searchs {
+  background-color: transparent;
+  margin-left: 415px;
+  padding: 0px;
+  border: 0;
+  width: 50px;
+  height: 50px;
+}
+
+.searchs:hover {
+  transform: rotate(90deg);
+}
+.searchs.active:hover {
+  transform: rotate(-90deg);
+}
+
+.searchbutton {
+  background-color: transparent;
+  margin: 50px;
+  padding: 0px;
+  border: 0;
+  width: 50px;
+  height: 50px;
+}
+/* .searchbutton:hover {
+  animation-name: searchanime;
+  animation-duration: 0.25s;
+  transform: rotate(360deg);
+} */
+@keyframes searchanime {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.profilebutton.active {
+  transform: rotate(90deg);
+}
+
+.socials {
+  background-color: transparent;
+  border: 0;
+  width: 50px;
+  height: 50px;
+  transform: scale(0);
+}
+
+.socials.active {
+  animation-name: circleexpand;
+  animation-duration: 0.25s;
+  transform: scale(1);
+}
+.socials.active:hover {
+  transform: scale(1.5);
+}
+.sharebutton {
+  background-color: transparent;
+  border: 0;
+}
+/* .sharebutton:hover {
+  animation-name: searchanime;
+  animation-duration: 0.25s;
+  transform: rotate(360deg);
+  background-color: transparent;
+  border: 0;
+} */
+
+.sharebutton.active {
+  animation-name: shareanime;
+  animation-duration: 0.25s;
+  transform: rotate(45deg);
+}
+
+@keyframes shareanime {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(11.25deg);
+  }
+  50% {
+    transform: rotate(22.5deg);
+  }
+  75% {
+    transform: rotate(33.75deg);
+  }
+  100% {
+    transform: rotate(45deg);
+  }
+}
+@keyframes circleexpand {
+  0% {
+    transform: scale(0);
+  }
+  25% {
+    transform: scale(0.25);
+  }
+  50% {
+    transform: scale(0.5);
+  }
+  75% {
+    transform: scale(0.75);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

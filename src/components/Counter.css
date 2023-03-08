@@ -1,0 +1,83 @@
+.primary-grid {
+  margin: 10px;
+  display: grid;
+  grid-template-columns: auto auto;
+}
+@font-face {
+  font-family: "Cameliya";
+  src: local("Cameliya"), url("~Cameliya/Cameliya.otf") format("opentype");
+}
+.gen-grid {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+.display-name {
+  text-decoration: none;
+
+  font-family: Cameliya;
+  color: black;
+  font-size: 70px;
+}
+.description {
+  justify-content: center;
+  margin: 20px;
+}
+.show-img {
+  margin: 5px;
+  width: 300px;
+  height: 300px;
+  box-shadow: 0 0 4px 3px black;
+}
+.counter-header {
+  font-family: Cameliya;
+  color: black;
+  font-size: 80px;
+  text-align: center;
+  margin: 10px;
+}
+.display-name:hover {
+  text-decoration: none;
+  color: #6db966;
+}
+span {
+  text-decoration: none;
+  font-size: 20px;
+  color: black;
+}
+.home-primary {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (max-width: 1000px) {
+  .home-primary {
+  }
+  .counter-header {
+    font-family: Cameliya;
+    color: black;
+    font-size: 60px;
+    text-align: center;
+    margin: 10px;
+  }
+  .display-name {
+    text-decoration: none;
+    font-family: Cameliya;
+    color: black;
+    font-size: 40px;
+  }
+  .primary-grid {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: auto;
+  }
+  .description {
+    justify-content: center;
+  }
+  .gen-grid {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+  .show-img {
+    width: 225px;
+    height: 225px;
+  }
+}
