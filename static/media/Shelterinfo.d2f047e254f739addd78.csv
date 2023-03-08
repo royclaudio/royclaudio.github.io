@@ -1,0 +1,38 @@
+﻿id,Type,Info,Name,TypeofHousing,Address,LengthofStay,Phone
+1 ,Substance Use Treatment,Information on Substance Use Treatment,Albuquerque Behavioral Health LLC,na,8200 Mountain NE Suite 106 87110,na,505-830-6500
+2 ,Permanent Supportive Housing,Permanent housing for homeless individuals with chronic mental illness or substance abuse issues,Albuquerque Health Care for the Homeless,na,1217 1st NW,na,505-766-5197 Fax: 505-766-6945
+3 ,Health Care,Health care services for homeless individuals and families,Albuquerque Health Care for the Homeless,na,1217 1st NW,na,505-766-5197
+4 ,Emergency Homeless Shelters,Short-term immediate assistance for people experiencing homelessness,Barrett Foundation,For single women and families,10300 Constitution NE,Length of Stay: 30 days,505-246-9244 Fax: 505-246-9272
+5 ,Rapid Re-Housing,Supportive housing programs that provide housing assistance for up to 24 months ,Barrett Foundation ,For single women and families,10300 Constitution NE,na,505-246-9244 Fax: 505-246-9272
+6 ,Permanent Supportive Housing,Permanent housing for homeless individuals with chronic mental illness or substance abuse issues,Barrett Foundation ,For single females with children,10300 Constitution NE,na,505-246-9244 Fax: 505-246-9272
+7 ,Emergency Homeless Shelters,Short-term immediate assistance for people experiencing homelessness,CABQ Wellness-2 Family Shelter,For families,na,Length of Stay: 90 days,505-554-0901
+8 ,Emergency Homeless Shelters,Short-term immediate assistance for people experiencing homelessness,CABQ Westside Emergency Housing Center,For single individuals,7440 Jim McDowell NW,na,505-839-9193
+9 ,Emergency Homeless Shelters,Short-term immediate assistance for people experiencing homelessness,Casa Q,For LGBQTIA teens aged 14 to 17 and their allies. No walk-ins accepted. Call ahead with referrals,na,na,505-872-2099
+10 ,Rapid Re-Housing,Supportive housing programs that provide housing assistance for up to 24 months ,Casa Q,For LGBQTIA teens aged 14 to 17 and their allies. No walk-ins accepted. Call ahead with referrals.,na,Capacity: 10,505-872-2099
+11 ,Permanent Supportive Housing,Permanent housing for homeless individuals with chronic mental illness or substance abuse issues,Catholic Charities – Proyecto la Luz,For Individuals and families with Children,2010 Bridge SW,na,505-724-4670 Fax: 505-724-4682
+12 ,Substance Use Treatment,Information on Substance Use Treatment,Common Sense Counseling,na,431 San Mateo NE 87108,na,505-803-2467
+13 ,Permanent Supportive Housing,Permanent housing for homeless individuals with chronic mental illness or substance abuse issues,Crossroads for Women,For formerly incarcerated women and families,239 Elm,na,505-242-1010 Fax: 505-242-1551
+14 ,Permanent Supportive Housing,Permanent housing for homeless individuals with chronic mental illness or substance abuse issues,Cuidando Los Ninos,For families,1500 Walter SE,na,505-843-6899
+15 ,Childcare,Service description: Childcare services for homeless families,Cuidando Los Niños,Case Management Program,1500 Walter SE,Day Care Services,505-843-6899  Fax: 505-764-8296
+16 ,Substance Use Treatment,Information on Substance Use Treatment,Duke City Recovery Toolbox,na,912 1st NW 87102,na,505-224-9777
+17 ,Substance Use Treatment,Information on Substance Use Treatment,Engender Inc.,na,6749 Academy NE Suite D 87109,na,505-242-4400
+18 ,Street Outreach,Street-level outreach and navigation services for people experiencing homelessness,First Nations Community Healthsource,na,6416 Zuni SE,na,505-262-2481
+19 ,Health Care,Health care services for homeless individuals and families,First Nations Community Healthsource,na,6416 Zuni SE,na,505-262-2481
+20 ,Emergency Homeless Shelters,Short-term immediate assistance for people experiencing homelessness,Good Shepherd Center,For single males,218 Iron SW,na,505-243-2527
+21 ,Rapid Re-Housing,Supportive housing programs that provide housing assistance for up to 24 months ,Heading Home,For individuals and families,na,na,505-344-2323 Press 2
+22 ,Street Outreach,Street-level outreach and navigation services for people experiencing homelessness,Heading Home: ABQ Street Connect,na,2040 4th NW,na,505-344-2323 Press 3
+23 ,Emergency Homeless Shelters,Short-term immediate assistance for people experiencing homelessness,Heading Home’s Albuquerque Opportunity Center (AOC) ,For single males. No walk-in accepted call ahead with referrals,715 Candelaria NE,Length of Stay: 30 to 90 days,505-344-2323 Fax: 505-344-2088
+24 ,Permanent Supportive Housing,Permanent housing for homeless individuals with chronic mental illness or substance abuse issues,HopeWorks,For individuals and families,1201 3rd NW,na,Main 505-242-4399 | Behavioral Health 505-764-8231 | Shelter 505-843-9405
+25 ,Employment Services,Employment services and job placement for homeless persons,HopeWorks,na,1120 2nd NW Albuquerque NM 87102 (administration),na,Main 505-242-4399 | Behavioral Health 505-764-8231 | Shelter 505-843-9405
+26 ,Emergency Homeless Shelters,Short-term immediate assistance for people experiencing homelessness,New Day Youth and Family Services,For youth aged 11 to 17,2820 Ridgecrest SE,na,505-938-1060
+27 ,Permanent Supportive Housing,Permanent housing for homeless individuals with chronic mental illness or substance abuse issues,New Day Youth and Family Services,For youth aged 17 to 24,2820 Ridgecrest SE,na,505-938-1060
+28 ,Permanent Supportive Housing,Permanent housing for homeless individuals with chronic mental illness or substance abuse issues,New Day Youth and Family Services,For youth aged 17 to 24,2820 Ridgecrest Dr. SE,na,505-938-1060
+29 ,Emergency Homeless Shelters,Short-term immediate assistance for people experiencing homelessness,SAFE House,For victims of domestic violence,P.O. Box 25363,Length of Stay: 90 days,505-247-4219 Fax: 505-224-9695
+30 ,Permanent Supportive Housing,Permanent housing for homeless individuals with chronic mental illness or substance abuse issues,SAFE House – RISE,For victims of Domestic Violence with Children,na,na,505-366-2400
+31 ,Permanent Supportive Housing,Permanent housing for homeless individuals with chronic mental illness or substance abuse issues,Serenity Mesa,For youth aged 14 to 21 who struggle with addiction ,3701 Condershire SW,na,505-877-3644
+32 ,Permanent Supportive Housing,Permanent housing for homeless individuals with chronic mental illness or substance abuse issues,Supportive Housing Coalition of NM,For individuals and families,625 Silver SW,na,505-255-3643 Fax: 888-370-3898
+33 ,Permanent Supportive Housing,Permanent housing for homeless individuals with chronic mental illness or substance abuse issues,Tenderlove,For individuals and families,1518 Girard NE ,na,505-349-1795
+34 ,Employment Services,Employment services and job placement for homeless persons,Tenderlove,na,1518 Girard NE ,na,505-349-1795
+35 ,Permanent Supportive Housing,Permanent housing for homeless individuals with chronic mental illness or substance abuse issues,Therapeutic Living Services,For individuals and families,5601 Domingo NE,na,505-268-5295 Fax: 505-268-9967
+36 ,Permanent Supportive Housing,Permanent housing for homeless individuals with chronic mental illness or substance abuse issues,Vizionz Sankofa,For individuals and families,1258 Ortiz SE,na,505-832-7141
+37 ,Permanent Supportive Housing,Permanent housing for homeless individuals with chronic mental illness or substance abuse issues,Youth Development Inc (YDI),For youth aged 16 to 24,3411 Candelaria NE,na,505-352-3444
