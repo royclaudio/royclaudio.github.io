@@ -16,8 +16,12 @@ export class Home extends Component {
     this.populateShelterData();
   }
   processCSV = (str, delim = ",") => {
-    const headers = str.slice(0, str.indexOf("\n")).split(delim);
-    const rows = str.slice(str.indexOf("\n") + 1).split("\n");
+    const headers = String(str)
+      .slice(0, String(str).indexOf("\n"))
+      .split(delim);
+    const rows = String(str)
+      .slice(String(str).indexOf("\n") + 1)
+      .split("\n");
 
     const newArray = rows.map((row) => {
       const values = row.split(delim);
@@ -59,10 +63,10 @@ export class Home extends Component {
           Community Services
           <InfoButton info=" Services available. There are many, click a button to learn more" />
         </h1>
-        <div class="sidebar">
+        <div className="sidebar">
           <SelectService />
         </div>
-        <div class="content">{contents}</div>
+        <div className="content">{contents}</div>
       </div>
     );
   }

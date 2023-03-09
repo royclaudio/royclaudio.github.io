@@ -43,7 +43,7 @@ export class InfoContainer extends Component {
             height="100px"
             fill="black"
             viewBox="0 0 1000 1000"
-            enable-background=" 0 0 1000 1000"
+            enableBackground=" 0 0 1000 1000"
           >
             <path
               opacity="1.000000"

@@ -39,7 +39,7 @@ export class NavMenu extends Component {
               height="100px"
               fill="black"
               viewBox="0 0 1000 1000"
-              enable-background=" 0 0 1000 1000"
+              enableBackground=" 0 0 1000 1000"
             >
               <path
                 className="flag-style"
@@ -71,7 +71,7 @@ export class NavMenu extends Component {
           Everyday I strive to set a good example for my family."
           />
         </div>
-        <nav class="navMenu">
+        <nav className="navMenu">
           <a href="/">Home</a>
 
           <a href="/counter">Projects</a>
@@ -92,7 +92,7 @@ export class NavMenu extends Component {
               </a>
             </span>
           </a>
-          <div class="dot"></div>
+          <div className="dot"></div>
         </nav>
       </header>
     );

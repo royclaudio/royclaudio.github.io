@@ -13,7 +13,7 @@ export class Layout extends Component {
           {this.props.children}
         </body>
         <footer className="footer-style">
-          © 2023 Built With React.js & .NET | By Roy
+          © 2023 Built With React.js | By Roy
         </footer>
       </div>
     );
