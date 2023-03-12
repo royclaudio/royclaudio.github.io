@@ -1,14 +1,14 @@
 .title {
   text-align: center;
-  margin-bottom: 45px;
+  margin-top: -30px;
 }
 
 .sidebar {
   position: fixed;
-  top: 280px;
+  top: 290px;
 }
 div.content {
-  padding-left: 510px;
+  padding-left: 550px;
 }
 
 .grid-home {
@@ -16,6 +16,9 @@ div.content {
   grid-template-rows: auto;
   grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
   /* grid-gap: calc(calc(#{$total} - calc(#{$count} * $width)) / (#{$count - 1})); */
+}
+.home-content {
+  margin: auto;
 }
 .show-img1 {
   height: 100px;

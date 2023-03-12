@@ -7,7 +7,7 @@
   grid-template-rows: auto 1fr auto;
 }
 .style-body {
-  background-color: #ffeeee;
+  background-color: white;
 }
 .footer-style {
   display: flex;

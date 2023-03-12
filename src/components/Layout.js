@@ -9,9 +9,9 @@ export class Layout extends Component {
     return (
       <div className="main-layout">
         <NavMenu />
-        <body className="style-body" tag="main">
+        <div className="style-body" tag="main">
           {this.props.children}
-        </body>
+        </div>
         <footer className="footer-style">
           © 2023 Built With React.js | By Roy
         </footer>

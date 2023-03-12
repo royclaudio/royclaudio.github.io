@@ -4,50 +4,110 @@ import InfoContainer from "./InfoContainer";
 import { SelectService } from "./SelectService";
 import { InfoButton } from "./InfoButton";
 import csv from "./Shelterinfo.csv";
+import Papa from "papaparse";
+
 export class Home extends Component {
   static displayName = Home.name;
-  // const [csvFile, setCsvFile] = useState();
-  //   const [csvArray, setCsvArray] = useState([]);
+
   constructor(props) {
     super(props);
-    this.state = { items: null, loading: true };
+    this.state = {
+      items: null,
+      loading: true,
+      selections: null,
+      value: null,
+    };
+
+    // this.handleChange = this.handleChange.bind(this);
+    // this.handleSubmit = this.handleSubmit.bind(this);
+  }
+  handleCheck = (e) => {
+    console.log("something " + e);
+  };
+  checked(event) {
+    console.log(event);
+  }
+  handleSubmit(event) {
+    alert("Your favorite flavor is: " + this.state.value);
+    event.preventDefault();
   }
   componentDidMount() {
-    this.populateShelterData();
-  }
-  processCSV = (str, delim = ",") => {
-    const headers = String(str)
-      .slice(0, String(str).indexOf("\n"))
-      .split(delim);
-    const rows = String(str)
-      .slice(String(str).indexOf("\n") + 1)
-      .split("\n");
-
-    const newArray = rows.map((row) => {
-      const values = row.split(delim);
-      const eachObject = headers.reduce((obj, header, i) => {
-        obj[header] = values[i];
-        return obj;
-      }, {});
-      return eachObject;
+    const unique = [];
+    Papa.parse(csv, {
+      header: true,
+      download: true,
+      dynamicTyping: true,
+      complete: (results) => {
+        results.data.map((item) => {
+          if (unique.indexOf(item.Type) === -1) {
+            unique.push(item.Type);
+          }
+        });
+        unique.pop();
+        this.setState({
+          items: results.data,
+          loading: false,
+          selections: unique,
+        });
+      },
     });
+    {
+    }
+  }
 
-    // setCsvArray(newArray);
-    this.setState({ items: newArray, loading: false });
-  };
   static renderitems(items) {
     return (
       <div className="grid-home">
-        {items.map((item) => (
-          <div className="grid-element">
+        {items.map((item, i) => (
+          <div className="grid-element" key={i}>
             <InfoContainer
               title={item.Name}
               address={item.Address}
               info={item.Info}
-              type={item.TypeofHousing}
+              type={item.Type}
+              typeofhousing={item.TypeofHousing}
             />
           </div>
         ))}
+      </div>
+    );
+  }
+  static renderservice(items) {
+    return (
+      <div>
+        {items.map((item, i) => (
+          <div key={i}>
+            <label>
+              <input
+                type="checkbox"
+                name={item}
+                checked={this.checked}
+                onChange={this.handleCheck}
+              />
+              {item}
+            </label>
+          </div>
+        ))}
+      </div>
+    );
+  }
+  static SelectServicecomp(items) {
+    let contents = Home.renderservice(items);
+    return (
+      <div className="selectservice-info">
+        <h2 className="">
+          Select Service
+          <InfoButton info=" Services available. There are many, click a button to learn more" />
+        </h2>
+        <div className="selector">{contents}</div>
+        <div className="grid-container">
+          <form onSubmit={this.handleSubmit}>
+            <input type="submit" value="Hide All" className="ssbtn" />
+          </form>
+          <form onSubmit={this.handleSubmit}>
+            <input type="submit" value="Show All" className="ssbtn" />
+          </form>
+        </div>
       </div>
     );
   }
@@ -57,26 +117,28 @@ export class Home extends Component {
     ) : (
       Home.renderitems(this.state.items)
     );
+    let selectservice = this.state.loading ? (
+      <img className="show-img1" src="whale.gif"></img>
+    ) : (
+      Home.SelectServicecomp(this.state.selections)
+    );
+
     return (
-      <div className="home-content">
-        <h1 className="title">
-          Community Services
-          <InfoButton info=" Services available. There are many, click a button to learn more" />
-        </h1>
-        <div className="sidebar">
-          <SelectService />
+      <div>
+        <div className="title">
+          <h1>
+            Community Services
+            <InfoButton info=" Services available. There are many, click a button to learn more" />
+          </h1>
         </div>
-        <div className="content">{contents}</div>
+        <div className="home-content">
+          <div className="sidebar">{selectservice}</div>
+          <div className="content">
+            <p>X Result(s)</p>
+            {contents}
+          </div>
+        </div>
       </div>
     );
   }
-  async populateShelterData() {
-    const response = await fetch(csv);
-    const reader = response.body.getReader();
-    const result = await reader.read();
-    this.processCSV(result);
-  }
 }
-// const response = await fetch("shelters");
-// const data = await response.json();
-// this.setState({ items: data, loading: false });

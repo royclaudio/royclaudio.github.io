@@ -19,6 +19,7 @@
 }
 
 .links {
+  font-size: 15px;
   position: relative;
   display: inline-block;
 }
@@ -69,6 +70,7 @@
 .primary {
   display: grid;
   place-items: center;
+  background-image: url("./sandias.jpg");
 }
 .primary-header {
   display: grid;
@@ -78,9 +80,9 @@
   grid-row: 1/-1;
   grid-column: 1/-1;
 }
-svg .flag-style:hover {
+/* svg .flag-style:hover {
   fill: #ffeeee;
-}
+} */
 .primary-header__flag {
   margin-top: 1em;
   grid-column: 1;
@@ -89,18 +91,21 @@ svg .flag-style:hover {
 .primary-header__title {
   text-decoration: none;
   font-family: Cameliya;
-  color: black;
+  color: #6e0008;
   font-size: 100px;
   grid-column: 2;
 }
 .primary-header__title:hover {
+  opacity: 0.5;
+  filter: blur(1px);
   text-decoration: none;
   cursor: grab;
-  color: #ffeeee;
+  color: black;
 }
-.primary-header__flag:hover {
+.primary-header__flag:hover .flag-style:nth-child(n + 16) {
+  opacity: 0.5;
+  filter: blur(1px);
   text-decoration: none;
-  cursor: grab;
   color: #ffeeee;
   fill: #ffeeee;
 }
