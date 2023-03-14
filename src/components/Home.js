@@ -92,14 +92,30 @@ export class Home extends Component {
     );
   }
   static SelectServicecomp(items) {
-    let contents = Home.renderservice(items);
+    // let contents = Home.renderservice(items);
     return (
       <div className="selectservice-info">
         <h2 className="">
           Select Service
           <InfoButton info=" Services available. There are many, click a button to learn more" />
         </h2>
-        <div className="selector">{contents}</div>
+        <div className="selector">
+          <div>
+            {items.map((item, i) => (
+              <div key={i}>
+                <label>
+                  <input
+                    type="checkbox"
+                    name={item}
+                    checked={this.checked}
+                    onChange={this.handleCheck}
+                  />
+                  {item}
+                </label>
+              </div>
+            ))}
+          </div>
+        </div>
         <div className="grid-container">
           <form onSubmit={this.handleSubmit}>
             <input type="submit" value="Hide All" className="ssbtn" />
