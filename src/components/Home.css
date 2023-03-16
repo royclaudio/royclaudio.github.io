@@ -8,7 +8,7 @@
   top: 290px;
 }
 div.content {
-  padding-left: 550px;
+  padding-left: 250px;
 }
 .home_title {
   margin-top: 100px;
@@ -18,11 +18,19 @@ div.content {
   font-size: 30px;
   margin: 0;
 }
-
+.selector {
+  display: grid;
+  grid-auto-flow: row;
+  margin: 20px;
+}
+.selector-info {
+  display: grid;
+  grid-auto-flow: row;
+}
 .grid-home {
   display: grid;
   grid-template-rows: auto;
-  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
 .home-content {
   margin: auto;

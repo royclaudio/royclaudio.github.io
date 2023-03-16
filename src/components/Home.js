@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import "./Home.css";
 import InfoContainer from "./InfoContainer";
-import { SelectService } from "./SelectService";
 import { InfoButton } from "./InfoButton";
 import csv from "./Shelterinfo.csv";
 import Papa from "papaparse";
@@ -16,25 +15,11 @@ export class Home extends Component {
       loading: true,
       selections: null,
       checkedItems: new Set(),
+      maincontent: null,
     };
-    this.handleCheck = this.handleCheck.bind(this);
-  }
-  handleCheck(event) {
-    console.log(event);
-    const target = event.target;
-    const item = target.name;
-    const isChecked = target.checked;
-    this.setState((prevState) => ({
-      checkedItems: isChecked
-        ? prevState.checkedItems.add(item)
-        : prevState.checkedItems.delete(item),
-    }));
+    this.handleClick = this.handleClick.bind(this);
   }
 
-  handleSubmit(event) {
-    alert("Your favorite flavor is: " + event);
-    event.preventDefault();
-  }
   componentDidMount() {
     const unique = [];
     Papa.parse(csv, {
@@ -60,7 +45,7 @@ export class Home extends Component {
     }
   }
 
-  static renderitems(items) {
+  renderitems(items) {
     return (
       <div className="grid-home">
         {items.map((item, i) => (
@@ -77,59 +62,84 @@ export class Home extends Component {
       </div>
     );
   }
-  static renderservice(items, checkedItems, handleCheck) {
+
+  renderselections(items, handleClick) {
     return (
-      <div>
+      <div className="selector">
         {items.map((item, i) => (
-          <div key={i}>
-            <label>
-              <input
-                type="checkbox"
-                defaultChecked={checkedItems.has(item)}
-                onChange={handleCheck}
-              />
-              {item}
-            </label>
-          </div>
+          <label key={i}>
+            <input
+              type="checkbox"
+              id={item}
+              name={item}
+              onChange={() => handleClick(item)}
+            />
+            {item}
+          </label>
         ))}
       </div>
     );
   }
-  static SelectServicecomp(items, checkedItems, handleCheck) {
-    return (
-      <div className="selectservice-info">
-        <h2 className="">
-          Select Service
-          <InfoButton info=" Services available. There are many, click a button to learn more" />
-        </h2>
-        <div className="selector">
-          {Home.renderservice(items, checkedItems, handleCheck)}
-        </div>
-        <div className="grid-container">
-          <form onSubmit={Home.handleSubmit}>
-            <input type="submit" value="Hide All" className="ssbtn" />
-          </form>
-          <form onSubmit={Home.handleSubmit}>
-            <input type="submit" value="Show All" className="ssbtn" />
-          </form>
-        </div>
-      </div>
-    );
+  handleClick(item) {
+    let checkedlist = this.state.checkedItems;
+    let content = [];
+    if (checkedlist.has(item)) {
+      checkedlist.delete(item);
+      this.setState({ checkedItems: checkedlist });
+      this.state.items.forEach((element) => {
+        if (checkedlist.has(element.Type)) {
+          content.push(element);
+        }
+      });
+    } else {
+      checkedlist.add(item);
+      this.setState({ checkedItems: checkedlist });
+      this.state.items.forEach((element) => {
+        if (checkedlist.has(element.Type)) {
+          content.push(element);
+        }
+      });
+    }
+
+    this.count = content.length;
+    this.currentcontent = content;
+    this.setState({ maincontent: this.renderitems(this.currentcontent) });
+  }
+  btnpressed(item) {
+    let checkedlist = this.state.checkedItems;
+    let content = [];
+    if (item == 1) {
+      this.state.items.forEach((element) => {
+        checkedlist.add(item.Type);
+        content.push(element);
+      });
+    } else {
+      this.state.items.forEach((element) => {
+        content.pop(element);
+      });
+    }
+
+    this.count = content.length;
+    this.currentcontent = content;
+    this.setState({ maincontent: this.renderitems(this.currentcontent) });
   }
   render() {
-    let contents = this.state.loading ? (
-      <img className="show-img1" src="whale.gif"></img>
-    ) : (
-      Home.renderitems(this.state.items)
-    );
+    let contents =
+      (this.count == null) | (this.count == 0) ? (
+        <div className="content">
+          <p>Please select an option to continue.</p>
+          <img style={{ height: 390, width: "95%" }} src="loading.gif"></img>
+        </div>
+      ) : (
+        <div className="content">
+          <p>Result(s): {this.count}</p>
+          {this.state.maincontent}
+        </div>
+      );
     let selectservice = this.state.loading ? (
       <img className="show-img1" src="whale.gif"></img>
     ) : (
-      Home.SelectServicecomp(
-        this.state.selections,
-        this.state.checkedItems,
-        Home.handleCheck
-      )
+      this.renderselections(this.state.selections, this.handleClick)
     );
 
     return (
@@ -141,11 +151,22 @@ export class Home extends Component {
           </h1>
         </div>
         <div className="home-content">
-          <div className="sidebar">{selectservice}</div>
-          <div className="content">
-            <p>Result(s): </p>
-            {contents}
+          <div className="sidebar">
+            <div className="selector-info">
+              <h2 className="title">
+                Select Service
+                <InfoButton info=" Services available. There are many, click a button to learn more" />
+              </h2>
+              {selectservice}
+              <button className="button" onClick={() => this.btnpressed(1)}>
+                All
+              </button>
+              <button className="button" onClick={() => this.btnpressed(0)}>
+                Nothing
+              </button>
+            </div>
           </div>
+          {contents}
         </div>
       </div>
     );

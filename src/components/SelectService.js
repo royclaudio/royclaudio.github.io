@@ -12,7 +12,6 @@ export class SelectService extends Component {
 
   static renderitems(items) {
     let list = [];
-    console.log("ss items: " + items);
     return (
       <div>
         {items.map((item) => (
