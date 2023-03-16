@@ -5,3 +5,26 @@
   font-size: 25px;
   margin: 10px;
 }
+.webscrape-primary {
+  margin: 0;
+  justify-content: center;
+}
+.horse-name:hover .flag-style {
+  fill: black;
+}
+
+.header__title {
+  margin: 30px;
+  text-decoration: none;
+  font-family: Cameliya;
+  color: #6e0008;
+  font-size: 30px;
+  margin: 0;
+}
+.header__title:hover {
+  opacity: 0.5;
+  filter: blur(1px);
+  text-decoration: none;
+  cursor: grab;
+  color: black;
+}

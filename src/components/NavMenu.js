@@ -681,8 +681,8 @@ z"
         </div>
         <nav className="navMenu">
           <a href="/">Home</a>
-          <a href="/web-scrape"> Web Scraping Project </a>
-          <a href="/counter">Projects</a>
+          <a href="/web-scrape">Web Scraping Project </a>
+          <a href="/counter">Past Projects</a>
 
           <div className="links">
             <a>Resources</a>

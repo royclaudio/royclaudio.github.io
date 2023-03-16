@@ -15,20 +15,24 @@ export class Home extends Component {
       items: null,
       loading: true,
       selections: null,
-      value: null,
+      checkedItems: new Set(),
     };
-
-    // this.handleChange = this.handleChange.bind(this);
-    // this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleCheck = this.handleCheck.bind(this);
   }
-  handleCheck = (e) => {
-    console.log("something " + e);
-  };
-  checked(event) {
+  handleCheck(event) {
     console.log(event);
+    const target = event.target;
+    const item = target.name;
+    const isChecked = target.checked;
+    this.setState((prevState) => ({
+      checkedItems: isChecked
+        ? prevState.checkedItems.add(item)
+        : prevState.checkedItems.delete(item),
+    }));
   }
+
   handleSubmit(event) {
-    alert("Your favorite flavor is: " + this.state.value);
+    alert("Your favorite flavor is: " + event);
     event.preventDefault();
   }
   componentDidMount() {
@@ -44,6 +48,7 @@ export class Home extends Component {
           }
         });
         unique.pop();
+        results.data.pop();
         this.setState({
           items: results.data,
           loading: false,
@@ -72,7 +77,7 @@ export class Home extends Component {
       </div>
     );
   }
-  static renderservice(items) {
+  static renderservice(items, checkedItems, handleCheck) {
     return (
       <div>
         {items.map((item, i) => (
@@ -80,9 +85,8 @@ export class Home extends Component {
             <label>
               <input
                 type="checkbox"
-                name={item}
-                checked={this.checked}
-                onChange={this.handleCheck}
+                defaultChecked={checkedItems.has(item)}
+                onChange={handleCheck}
               />
               {item}
             </label>
@@ -91,8 +95,7 @@ export class Home extends Component {
       </div>
     );
   }
-  static SelectServicecomp(items) {
-    // let contents = Home.renderservice(items);
+  static SelectServicecomp(items, checkedItems, handleCheck) {
     return (
       <div className="selectservice-info">
         <h2 className="">
@@ -100,27 +103,13 @@ export class Home extends Component {
           <InfoButton info=" Services available. There are many, click a button to learn more" />
         </h2>
         <div className="selector">
-          <div>
-            {items.map((item, i) => (
-              <div key={i}>
-                <label>
-                  <input
-                    type="checkbox"
-                    name={item}
-                    checked={this.checked}
-                    onChange={this.handleCheck}
-                  />
-                  {item}
-                </label>
-              </div>
-            ))}
-          </div>
+          {Home.renderservice(items, checkedItems, handleCheck)}
         </div>
         <div className="grid-container">
-          <form onSubmit={this.handleSubmit}>
+          <form onSubmit={Home.handleSubmit}>
             <input type="submit" value="Hide All" className="ssbtn" />
           </form>
-          <form onSubmit={this.handleSubmit}>
+          <form onSubmit={Home.handleSubmit}>
             <input type="submit" value="Show All" className="ssbtn" />
           </form>
         </div>
@@ -136,13 +125,17 @@ export class Home extends Component {
     let selectservice = this.state.loading ? (
       <img className="show-img1" src="whale.gif"></img>
     ) : (
-      Home.SelectServicecomp(this.state.selections)
+      Home.SelectServicecomp(
+        this.state.selections,
+        this.state.checkedItems,
+        Home.handleCheck
+      )
     );
 
     return (
       <div>
-        <div className="title">
-          <h1>
+        <div className="">
+          <h1 className="home_title">
             Community Services
             <InfoButton info=" Services available. There are many, click a button to learn more" />
           </h1>
@@ -150,7 +143,7 @@ export class Home extends Component {
         <div className="home-content">
           <div className="sidebar">{selectservice}</div>
           <div className="content">
-            <p>X Result(s)</p>
+            <p>Result(s): </p>
             {contents}
           </div>
         </div>

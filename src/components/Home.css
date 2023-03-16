@@ -10,12 +10,19 @@
 div.content {
   padding-left: 550px;
 }
+.home_title {
+  margin-top: 100px;
+  text-decoration: none;
+  font-family: Cameliya;
+  color: #6e0008;
+  font-size: 30px;
+  margin: 0;
+}
 
 .grid-home {
   display: grid;
   grid-template-rows: auto;
   grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
-  /* grid-gap: calc(calc(#{$total} - calc(#{$count} * $width)) / (#{$count - 1})); */
 }
 .home-content {
   margin: auto;
