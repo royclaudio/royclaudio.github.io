@@ -145,18 +145,12 @@ export class Home extends Component {
     return (
       <div>
         <div className="">
-          <h1 className="home_title">
-            Community Services
-            <InfoButton info=" Services available. There are many, click a button to learn more" />
-          </h1>
+          <h1 className="home_title">Community Services</h1>
         </div>
         <div className="home-content">
           <div className="sidebar">
             <div className="selector-info">
-              <h2 className="title">
-                Select Service
-                <InfoButton info=" Services available. There are many, click a button to learn more" />
-              </h2>
+              <h2 className="title">Select Service</h2>
               {selectservice}
               <button className="button" onClick={() => this.btnpressed(1)}>
                 All
