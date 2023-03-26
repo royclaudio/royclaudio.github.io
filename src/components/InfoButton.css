@@ -12,26 +12,25 @@
   font-size: 16px;
   color: #fff;
   text-align: left;
-  border-radius: 6px;
+  border-radius: 6px 6px 6px 6px; 
   padding: 5px 5px 5px 5px;
   position: absolute;
   z-index: 1;
-  top: 100%;
-  left: -120px;
-  /*bottom: 125%;*/
-  /*left: 50%;*/
+  bottom: 110%;
+  right: 10.5%;
 }
 
 /* Popup arrow */
 .popup .popuptext::after {
   content: "";
   position: absolute;
-  bottom: 100%;
-  left: 50%;
-  margin-left: -5px;
+  top: 100%;
+  right: 3%;
+  margin-left: -10px;
   border-width: 5px;
   border-style: solid;
-  border-color: transparent transparent #555 transparent;
+  border-color: #555 #555 transparent transparent;
+  /* transform: rotate(0.50turn); */
 }
 
 /* Toggle this class - hide and show the popup */

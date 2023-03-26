@@ -23,9 +23,10 @@
   /* overflow: scroll; */
   height: auto;
   border-width: 1.5px;
+  padding: 20px;
   border-style: solid;
   border-color: black;
-  border-radius: 5px 5px 5px 5px;
+  border-radius: 20px;
   background-image: linear-gradient(
     to bottom,
     white 0%,

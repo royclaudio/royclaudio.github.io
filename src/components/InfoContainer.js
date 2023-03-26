@@ -8,6 +8,159 @@ export class InfoContainer extends Component {
       hide: false,
     };
   }
+
+  Google() {
+    return (
+      <svg
+        width="64px"
+        height="64px"
+        viewBox="-3 0 262 262"
+        xmlns="http://www.w3.org/2000/svg"
+        preserveAspectRatio="xMidYMid"
+        fill="#000000"
+      >
+        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+        <g
+          id="SVGRepo_tracerCarrier"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        ></g>
+        <g id="SVGRepo_iconCarrier">
+          <path
+            d="M255.878 133.451c0-10.734-.871-18.567-2.756-26.69H130.55v48.448h71.947c-1.45 12.04-9.283 30.172-26.69 42.356l-.244 1.622 38.755 30.023 2.685.268c24.659-22.774 38.875-56.282 38.875-96.027"
+            fill="#4285F4"
+          ></path>
+          <path
+            d="M130.55 261.1c35.248 0 64.839-11.605 86.453-31.622l-41.196-31.913c-11.024 7.688-25.82 13.055-45.257 13.055-34.523 0-63.824-22.773-74.269-54.25l-1.531.13-40.298 31.187-.527 1.465C35.393 231.798 79.49 261.1 130.55 261.1"
+            fill="#34A853"
+          ></path>
+          <path
+            d="M56.281 156.37c-2.756-8.123-4.351-16.827-4.351-25.82 0-8.994 1.595-17.697 4.206-25.82l-.073-1.73L15.26 71.312l-1.335.635C5.077 89.644 0 109.517 0 130.55s5.077 40.905 13.925 58.602l42.356-32.782"
+            fill="#FBBC05"
+          ></path>
+          <path
+            d="M130.55 50.479c24.514 0 41.05 10.589 50.479 19.438l36.844-35.974C195.245 12.91 165.798 0 130.55 0 79.49 0 35.393 29.301 13.925 71.947l42.211 32.783c10.59-31.477 39.891-54.251 74.414-54.251"
+            fill="#EB4335"
+          ></path>
+        </g>
+      </svg>
+    );
+  }
+  Linkedin() {
+    return (
+      <svg
+        width="64px"
+        height="64px"
+        viewBox="0 0 32 32"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+        <g
+          id="SVGRepo_tracerCarrier"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        ></g>
+        <g id="SVGRepo_iconCarrier">
+          {" "}
+          <rect
+            x="2"
+            y="2"
+            width="28"
+            height="28"
+            rx="14"
+            fill="#1275B1"
+          ></rect>{" "}
+          <path
+            d="M12.6186 9.69215C12.6186 10.6267 11.8085 11.3843 10.8093 11.3843C9.81004 11.3843 9 10.6267 9 9.69215C9 8.7576 9.81004 8 10.8093 8C11.8085 8 12.6186 8.7576 12.6186 9.69215Z"
+            fill="white"
+          ></path>{" "}
+          <path
+            d="M9.24742 12.6281H12.3402V22H9.24742V12.6281Z"
+            fill="white"
+          ></path>{" "}
+          <path
+            d="M17.3196 12.6281H14.2268V22H17.3196C17.3196 22 17.3196 19.0496 17.3196 17.2049C17.3196 16.0976 17.6977 14.9855 19.2062 14.9855C20.911 14.9855 20.9008 16.4345 20.8928 17.5571C20.8824 19.0244 20.9072 20.5219 20.9072 22H24V17.0537C23.9738 13.8954 23.1508 12.4401 20.4433 12.4401C18.8354 12.4401 17.8387 13.1701 17.3196 13.8305V12.6281Z"
+            fill="white"
+          ></path>{" "}
+        </g>
+      </svg>
+    );
+  }
+  Twitter() {
+    return (
+      <svg
+        width="64px"
+        height="64px"
+        viewBox="0 0 48 48"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+        <g
+          id="SVGRepo_tracerCarrier"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        ></g>
+        <g id="SVGRepo_iconCarrier">
+          {" "}
+          <circle cx="24" cy="24" r="20" fill="#1DA1F2"></circle>{" "}
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M36 16.3086C35.1177 16.7006 34.1681 16.9646 33.1722 17.0838C34.1889 16.4742 34.9697 15.5095 35.3368 14.36C34.3865 14.9247 33.3314 15.3335 32.2107 15.5551C31.3123 14.5984 30.0316 14 28.6165 14C25.8975 14 23.6928 16.2047 23.6928 18.9237C23.6928 19.3092 23.7368 19.6852 23.8208 20.046C19.7283 19.8412 16.1005 17.8805 13.6719 14.9015C13.2479 15.6287 13.0055 16.4742 13.0055 17.3766C13.0055 19.0845 13.8735 20.5916 15.1958 21.4747C14.3878 21.4491 13.6295 21.2275 12.9647 20.8587V20.9203C12.9647 23.3066 14.663 25.296 16.9141 25.7496C16.5013 25.8616 16.0661 25.9224 15.6174 25.9224C15.2998 25.9224 14.991 25.8912 14.6902 25.8336C15.3166 27.7895 17.1357 29.2134 19.2899 29.2534C17.6052 30.5733 15.4822 31.3612 13.1751 31.3612C12.7767 31.3612 12.3848 31.338 12 31.2916C14.1791 32.6884 16.7669 33.5043 19.5475 33.5043C28.6037 33.5043 33.5562 26.0016 33.5562 19.4956C33.5562 19.282 33.5522 19.0693 33.5418 18.8589C34.5049 18.1629 35.34 17.2958 36 16.3086Z"
+            fill="white"
+          ></path>{" "}
+        </g>
+      </svg>
+    );
+  }
+  Facebook() {
+    return (
+      <svg
+        width="64px"
+        height="64px"
+        viewBox="0 0 32 32"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+        <g
+          id="SVGRepo_tracerCarrier"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        ></g>
+        <g id="SVGRepo_iconCarrier">
+          {" "}
+          <circle
+            cx="16"
+            cy="16"
+            r="14"
+            fill="url(#paint0_linear_87_7208)"
+          ></circle>{" "}
+          <path
+            d="M21.2137 20.2816L21.8356 16.3301H17.9452V13.767C17.9452 12.6857 18.4877 11.6311 20.2302 11.6311H22V8.26699C22 8.26699 20.3945 8 18.8603 8C15.6548 8 13.5617 9.89294 13.5617 13.3184V16.3301H10V20.2816H13.5617V29.8345C14.2767 29.944 15.0082 30 15.7534 30C16.4986 30 17.2302 29.944 17.9452 29.8345V20.2816H21.2137Z"
+            fill="white"
+          ></path>{" "}
+          <defs>
+            {" "}
+            <linearGradient
+              id="paint0_linear_87_7208"
+              x1="16"
+              y1="2"
+              x2="16"
+              y2="29.917"
+              gradientUnits="userSpaceOnUse"
+            >
+              {" "}
+              <stop stop-color="#18ACFE"></stop>{" "}
+              <stop offset="1" stop-color="#0163E0"></stop>{" "}
+            </linearGradient>{" "}
+          </defs>{" "}
+        </g>
+      </svg>
+    );
+  }
   clicked() {
     if (this.state.hide === false) {
       this.setState({
@@ -48,6 +201,7 @@ export class InfoContainer extends Component {
             viewBox="0 0 753 871"
             enableBackground="new 0 0 753 871"
           >
+            {" "}
             {/*inner circle*/}
             <path
               className="flag-style"
@@ -237,7 +391,6 @@ M705.967041,205.500214
 	C705.959595,151.699417 705.973938,178.366547 705.967041,205.500214 
 z"
             />
-
             <path
               className="flag-style"
               fill="#FEC265"
@@ -273,7 +426,6 @@ M346.535614,71.970863
 	C319.847839,71.835205 332.959442,71.884102 346.535614,71.970863 
 z"
             />
-
             <path
               className="flag-style"
               fill="#FEC265"
@@ -341,7 +493,6 @@ M690.901978,479.443176
 	C676.103394,479.319489 683.263672,479.306091 690.901978,479.443176 
 z"
             />
-
             <path
               className="flag-style"
               fill="#F6B961"
@@ -671,6 +822,7 @@ z"
           <h2>
             <a
               target="_blank"
+              rel="noopener noreferrer"
               className="infotitle-style"
               href={
                 "http://www.google.co.in/search?q=" +
@@ -684,188 +836,57 @@ z"
           </h2>
         </div>
         <div className="grid-container">
-          <button className="socials active">
-            <a
-              target="_blank"
-              href={
-                "http://www.google.co.in/search?q=" +
-                this.props.title +
-                " " +
-                this.props.address
-              }
-            >
-              <svg
-                width="50px"
-                height="50px"
-                viewBox="-0.5 0 48 48"
-                version="1.1"
-                xmlns="http://www.w3.org/2000/svg"
-                xmlnsXlink="http://www.w3.org/1999/xlink"
-                fill="#000000"
-              >
-                <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
-                <g id="SVGRepo_tracerCarrier" strokeLinejoin="round"></g>
-                <g id="SVGRepo_iconCarrier">
-                  {" "}
-                  <title>Google-color</title> <desc>Created with Sketch.</desc>{" "}
-                  <defs> </defs>{" "}
-                  <g
-                    id="Icons"
-                    stroke="none"
-                    strokeWidth="1"
-                    fill="none"
-                    fillRule="evenodd"
-                  >
-                    {" "}
-                    <g
-                      id="Color-"
-                      transform="translate(-401.000000, -860.000000)"
-                    >
-                      {" "}
-                      <g
-                        id="Google"
-                        transform="translate(401.000000, 860.000000)"
-                      >
-                        {" "}
-                        <path
-                          d="M9.82727273,24 C9.82727273,22.4757333 10.0804318,21.0144 10.5322727,19.6437333 L2.62345455,13.6042667 C1.08206818,16.7338667 0.213636364,20.2602667 0.213636364,24 C0.213636364,27.7365333 1.081,31.2608 2.62025,34.3882667 L10.5247955,28.3370667 C10.0772273,26.9728 9.82727273,25.5168 9.82727273,24"
-                          id="Fill-1"
-                          fill="#FBBC05"
-                        >
-                          {" "}
-                        </path>{" "}
-                        <path
-                          d="M23.7136364,10.1333333 C27.025,10.1333333 30.0159091,11.3066667 32.3659091,13.2266667 L39.2022727,6.4 C35.0363636,2.77333333 29.6954545,0.533333333 23.7136364,0.533333333 C14.4268636,0.533333333 6.44540909,5.84426667 2.62345455,13.6042667 L10.5322727,19.6437333 C12.3545909,14.112 17.5491591,10.1333333 23.7136364,10.1333333"
-                          id="Fill-2"
-                          fill="#EB4335"
-                        >
-                          {" "}
-                        </path>{" "}
-                        <path
-                          d="M23.7136364,37.8666667 C17.5491591,37.8666667 12.3545909,33.888 10.5322727,28.3562667 L2.62345455,34.3946667 C6.44540909,42.1557333 14.4268636,47.4666667 23.7136364,47.4666667 C29.4455,47.4666667 34.9177955,45.4314667 39.0249545,41.6181333 L31.5177727,35.8144 C29.3995682,37.1488 26.7323182,37.8666667 23.7136364,37.8666667"
-                          id="Fill-3"
-                          fill="#34A853"
-                        >
-                          {" "}
-                        </path>{" "}
-                        <path
-                          d="M46.1454545,24 C46.1454545,22.6133333 45.9318182,21.12 45.6113636,19.7333333 L23.7136364,19.7333333 L23.7136364,28.8 L36.3181818,28.8 C35.6879545,31.8912 33.9724545,34.2677333 31.5177727,35.8144 L39.0249545,41.6181333 C43.3393409,37.6138667 46.1454545,31.6490667 46.1454545,24"
-                          id="Fill-4"
-                          fill="#4285F4"
-                        >
-                          {" "}
-                        </path>{" "}
-                      </g>{" "}
-                    </g>{" "}
-                  </g>{" "}
-                </g>
-              </svg>
-            </a>
-          </button>
-          <button className="socials active">
-            <a
-              target="_blank"
-              href={
-                "https://www.linkedin.com/search/results/all/?keywords=" +
-                this.props.title +
-                "&origin=GLOBAL_SEARCH_HEADER&sid=uPE"
-              }
-            >
-              <svg
-                width="50px"
-                height="50px"
-                viewBox="0 0 32 32"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
-                <g id="SVGRepo_tracerCarrier" strokeLinejoin="round"></g>
-                <g id="SVGRepo_iconCarrier">
-                  <rect
-                    x="2"
-                    y="2"
-                    width="28"
-                    height="28"
-                    rx="14"
-                    fill="#1275B1"
-                  ></rect>
-                  <path
-                    d="M12.6186 9.69215C12.6186 10.6267 11.8085 11.3843 10.8093 11.3843C9.81004 11.3843 9 10.6267 9 9.69215C9 8.7576 9.81004 8 10.8093 8C11.8085 8 12.6186 8.7576 12.6186 9.69215Z"
-                    fill="white"
-                  ></path>
-                  <path
-                    d="M9.24742 12.6281H12.3402V22H9.24742V12.6281Z"
-                    fill="white"
-                  ></path>
-                  <path
-                    d="M17.3196 12.6281H14.2268V22H17.3196C17.3196 22 17.3196 19.0496 17.3196 17.2049C17.3196 16.0976 17.6977 14.9855 19.2062 14.9855C20.911 14.9855 20.9008 16.4345 20.8928 17.5571C20.8824 19.0244 20.9072 20.5219 20.9072 22H24V17.0537C23.9738 13.8954 23.1508 12.4401 20.4433 12.4401C18.8354 12.4401 17.8387 13.1701 17.3196 13.8305V12.6281Z"
-                    fill="white"
-                  ></path>
-                </g>
-              </svg>
-            </a>
-          </button>
-          <button className="socials active">
-            <a
-              target="_blank"
-              href={"https://www.facebook.com/search/top?q=" + this.props.title}
-            >
-              <svg
-                width="50px"
-                height="50px"
-                viewBox="0 0 16 16"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-              >
-                <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
-                <g id="SVGRepo_tracerCarrier" strokeLinejoin="round"></g>
-                <g id="SVGRepo_iconCarrier">
-                  <path
-                    fill="#1877F2"
-                    d="M15 8a7 7 0 00-7-7 7 7 0 00-1.094 13.915v-4.892H5.13V8h1.777V6.458c0-1.754 1.045-2.724 2.644-2.724.766 0 1.567.137 1.567.137v1.723h-.883c-.87 0-1.14.54-1.14 1.093V8h1.941l-.31 2.023H9.094v4.892A7.001 7.001 0 0015 8z"
-                  ></path>
-                  <path
-                    fill="#ffffff"
-                    d="M10.725 10.023L11.035 8H9.094V6.687c0-.553.27-1.093 1.14-1.093h.883V3.87s-.801-.137-1.567-.137c-1.6 0-2.644.97-2.644 2.724V8H5.13v2.023h1.777v4.892a7.037 7.037 0 002.188 0v-4.892h1.63z"
-                  ></path>
-                </g>
-              </svg>
-            </a>
-          </button>
-          <button className="socials active">
-            <a
-              href={
-                "https://twitter.com/search?q=" +
-                this.props.title +
-                "&src=typed_query"
-              }
-            >
-              <svg
-                width="50px"
-                height="50px"
-                viewBox="0 0 48 48"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
-                <g id="SVGRepo_tracerCarrier" strokeLinejoin="round"></g>
-                <g id="SVGRepo_iconCarrier">
-                  {" "}
-                  <circle cx="24" cy="24" r="20" fill="#1DA1F2"></circle>{" "}
-                  <path
-                    fillRule="evenodd"
-                    clipRule="evenodd"
-                    d="M36 16.3086C35.1177 16.7006 34.1681 16.9646 33.1722 17.0838C34.1889 16.4742 34.9697 15.5095 35.3368 14.36C34.3865 14.9247 33.3314 15.3335 32.2107 15.5551C31.3123 14.5984 30.0316 14 28.6165 14C25.8975 14 23.6928 16.2047 23.6928 18.9237C23.6928 19.3092 23.7368 19.6852 23.8208 20.046C19.7283 19.8412 16.1005 17.8805 13.6719 14.9015C13.2479 15.6287 13.0055 16.4742 13.0055 17.3766C13.0055 19.0845 13.8735 20.5916 15.1958 21.4747C14.3878 21.4491 13.6295 21.2275 12.9647 20.8587V20.9203C12.9647 23.3066 14.663 25.296 16.9141 25.7496C16.5013 25.8616 16.0661 25.9224 15.6174 25.9224C15.2998 25.9224 14.991 25.8912 14.6902 25.8336C15.3166 27.7895 17.1357 29.2134 19.2899 29.2534C17.6052 30.5733 15.4822 31.3612 13.1751 31.3612C12.7767 31.3612 12.3848 31.338 12 31.2916C14.1791 32.6884 16.7669 33.5043 19.5475 33.5043C28.6037 33.5043 33.5562 26.0016 33.5562 19.4956C33.5562 19.282 33.5522 19.0693 33.5418 18.8589C34.5049 18.1629 35.34 17.2958 36 16.3086Z"
-                    fill="white"
-                  ></path>{" "}
-                </g>
-              </svg>
-            </a>
-          </button>
+          <a
+            className="socials active"
+            target="_blank"
+            rel="noopener noreferrer"
+            href={
+              "http://www.google.co.in/search?q=" +
+              this.props.title +
+              " " +
+              this.props.address
+            }
+          >
+            <this.Google />
+          </a>
+          <a
+            className="socials active"
+            target="_blank"
+            rel="noopener noreferrer"
+            href={
+              "https://www.linkedin.com/search/results/all/?keywords=" +
+              this.props.title +
+              "&origin=GLOBAL_SEARCH_HEADER&sid=uPE"
+            }
+          >
+            <this.Linkedin />
+          </a>
+          <a
+            className="socials active"
+            target="_blank"
+            rel="noopener noreferrer"
+            href={"https://www.facebook.com/search/top?q=" + this.props.title}
+          >
+            <this.Facebook />
+          </a>
+          <a
+            className="socials active"
+            target="_blank"
+            rel="noopener noreferrer"
+            href={
+              "https://twitter.com/search?q=" +
+              this.props.title +
+              "&src=typed_query"
+            }
+          >
+            <this.Twitter />
+          </a>
         </div>
         <div className="moreinfoslide">
           <h6>
             <a
+              target="_blank"
+              rel="noopener noreferrer"
               className="moretitle-style"
               href={
                 "http://www.google.co.in/search?q=" +

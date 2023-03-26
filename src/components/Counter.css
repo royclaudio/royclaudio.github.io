@@ -1,83 +1,50 @@
-.primary-grid {
-  margin: 10px;
+.counter-primary {
   display: grid;
-  grid-template-columns: auto auto;
-}
-@font-face {
-  font-family: "Cameliya";
-  src: local("Cameliya"), url("~Cameliya/Cameliya.otf") format("opentype");
-}
-.gen-grid {
-  display: grid;
-  grid-template-columns: auto auto;
-}
-.display-name {
-  text-decoration: none;
-
-  font-family: Cameliya;
-  color: black;
-  font-size: 70px;
-}
-.description {
-  justify-content: center;
+  grid-template-rows: auto 1fr;
+  background-color: rgba(174, 174, 174, 0.5);
+  border-radius: 10px;
   margin: 20px;
+  padding: 10px;
 }
-.show-img {
-  margin: 5px;
-  width: 300px;
-  height: 300px;
-  box-shadow: 0 0 4px 3px black;
-}
-.counter-header {
-  font-family: Cameliya;
-  color: black;
-  font-size: 80px;
-  text-align: center;
-  margin: 10px;
-}
-.display-name:hover {
-  text-decoration: none;
-  color: #6db966;
-}
-span {
-  text-decoration: none;
-  font-size: 20px;
-  color: black;
-}
-.home-primary {
-  display: flex;
+.header-grid{
+  display: flex ;
   flex-direction: column;
 }
+.c-grid-home {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+}
+.c-title{
+  margin: 20px;
+  text-decoration: none;
+  font-family: 'Times New Roman', Times, serif;
+  color:#6e0008;
+  text-shadow: 0 0 5px white, 0 0 5px white;
+  font-size: 45px;
+}
+.description{
+  text-align: left;
+}
+.c-primary {
+  margin: auto;
+}
+.show-img{
+  height: 250px;
+  width: 250px;
+  border-radius: 20px;
+}
 @media screen and (max-width: 1000px) {
-  .home-primary {
-  }
-  .counter-header {
-    font-family: Cameliya;
-    color: black;
-    font-size: 60px;
-    text-align: center;
-    margin: 10px;
-  }
-  .display-name {
-    text-decoration: none;
-    font-family: Cameliya;
-    color: black;
-    font-size: 40px;
+  .c-grid-home{
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+
   }
   .primary-grid {
-    padding: 10px;
     display: grid;
     grid-template-columns: auto;
   }
-  .description {
-    justify-content: center;
-  }
-  .gen-grid {
-    display: grid;
-    grid-template-columns: auto auto;
-  }
   .show-img {
-    width: 225px;
-    height: 225px;
+    height: 150px;
+    width: 150px;
   }
 }

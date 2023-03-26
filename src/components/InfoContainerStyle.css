@@ -6,6 +6,10 @@
   border-radius: 20px;
   box-shadow: 0 0 4px 3px black;
   margin: 20px;
+  background-color: rgb(205, 205, 205);
+  animation-name: circleexpand;
+  animation-duration: 0.25s;
+  transform: scale(1);
 }
 
 .moreinfoslide {
@@ -16,18 +20,18 @@
   border-style: solid;
   border-color: black;
   text-align: left;
-  border-radius: 20px 20px 20px 20px;
+  border-radius: 10px;
   background-image: linear-gradient(
     to bottom,
-    white 0%,
-    rgb(230, 230, 230) 50%,
-    #aaaaaa 100%
+    rgb(230, 230, 230) 0%,
+    rgb(233, 233, 233) 50%,
+    rgb(185, 185, 185) 100%
   );
   animation-name: example;
   animation-duration: 0.25s;
 }
 .container-info:hover {
-  box-shadow: 0 0 4px 3px #6db966;
+  background-color: rgb(205, 205, 205,.7);
 }
 .grid-container {
   display: flex;
@@ -182,11 +186,7 @@ a {
 }
 
 .socials {
-  background-color: transparent;
-  border: 0;
-  width: 50px;
-  height: 50px;
-  transform: scale(0);
+height: auto;
 }
 
 .socials.active {

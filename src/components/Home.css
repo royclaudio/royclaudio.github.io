@@ -8,29 +8,65 @@
   top: 290px;
 }
 div.content {
-  padding-left: 250px;
+  padding-left: 600px;
 }
 .home_title {
-  margin-top: 100px;
+  margin: auto;
   text-decoration: none;
-  font-family: Cameliya;
-  color: #6e0008;
-  font-size: 30px;
-  margin: 0;
+  color:#6e0008;
+  text-shadow: 0 0 5px rgb(130, 130, 130), 0 0 5px rgb(77, 77, 77);
+  font-size: 65px;
+}
+.checkbox-title{
+  color:black;
+  font-family:'Times New Roman', Times, serif;
+  font-size: 25px;
 }
 .selector {
-  display: grid;
-  grid-auto-flow: row;
-  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  color: #6e0008;
+  font-family:'Times New Roman', Times, serif;
+}
+.service-button{
+  color: black;
+  font-family:'Times New Roman', Times, serif;
+  text-shadow: 0 0 5px white, 0 0 5px white;
+  font-size: 20px;
+  border-radius: 20px;
+  border: 2px solid black;
+  margin: 3px 2px;
+  transition-duration: 0.4s;
+  box-shadow: 0px 0px 2px 2px rgb(0, 0, 0);
+}
+.service-button:hover{
+ background-color: gray;
+}
+.service-title{
+  color: #6e0008;
+  font-family:'Times New Roman', Times, serif;
+   /* 1 pixel black shadow to left, top, right and bottom */
+   text-shadow: 0 0 5px white, 0 0 5px white;
+  font-size: 50px;
+  margin: 0;
 }
 .selector-info {
-  display: grid;
-  grid-auto-flow: row;
+  display: flex;
+  flex-direction: column;
+  color: black;
+  padding: 1rem;
+  border-radius: 20px;
+  box-shadow: 0 0 4px 3px black;
+  margin: 20px;
+  background-color: rgb(205, 205, 205);
+}
+.selector-info:hover {
+  background-color: rgb(205, 205, 205,.7);
 }
 .grid-home {
   display: grid;
   grid-template-rows: auto;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
 }
 .home-content {
   margin: auto;
@@ -38,24 +74,30 @@ div.content {
 .show-img1 {
   height: 100px;
   width: 100px;
+  opacity: .7;
   border: 0;
-  background-color: transparent;
 }
 .grid-element {
   color: #fff;
 }
 
 @media screen and (max-width: 1000px) {
+  .service-title{
+    font-size: 50px;
+  }
   .title {
     text-align: center;
-    margin-top: 45px;
+    top: 0;
   }
   .home-content {
     margin: auto;
   }
+  .checkbox-title{
+    font-size: 17px;
+  }
   .sidebar {
     position: relative;
-    top: 0;
+    top: 0px;
   }
   div.content {
     padding-left: 0;

@@ -9,12 +9,13 @@ export class Counter extends Component {
   }
   arduino() {
     return (
-      <div className="primary-grid">
+      <div className="counter-primary">
         <div className="description">
           <a
             target="_blank"
+            rel="noopener noreferrer"
             href="https://cec.aps.edu/cec-cse#robot"
-            className="display-name"
+            className="c-title"
           >
             Arduino Robot
           </a>
@@ -27,7 +28,7 @@ export class Counter extends Component {
             build the final product.
           </p>
         </div>
-        <div className="gen-grid">
+        <div>
           <img className="show-img" src="robot.gif"></img>
           <img className="show-img" src="robot1.gif"></img>
         </div>
@@ -36,12 +37,13 @@ export class Counter extends Component {
   }
   CollegeSource() {
     return (
-      <div className="primary-grid">
+      <div className="counter-primary">
         <div className="description">
           <a
             target="_blank"
+            rel="noopener noreferrer"
             href="https://appcontest.unm.edu/"
-            className="display-name"
+            className="c-title"
           >
             College Source
           </a>
@@ -61,12 +63,13 @@ export class Counter extends Component {
   }
   Homeless1() {
     return (
-      <div className="primary-grid">
+      <div className="counter-primary">
         <div className="description">
           <a
             target="_blank"
+            rel="noopener noreferrer"
             href="https://github.com/royclaudio"
-            className="display-name"
+            className="c-title"
           >
             Homeless Shelter <span>V1</span>
           </a>
@@ -88,12 +91,13 @@ export class Counter extends Component {
   }
   Homeless2() {
     return (
-      <div className="primary-grid">
+      <div className="counter-primary">
         <div className="description">
           <a
             target="_blank"
+            rel="noopener noreferrer"
             href="https://github.com/royclaudio"
-            className="display-name"
+            className="c-title"
           >
             Homeless Shelter <span>V2</span>
           </a>
@@ -115,12 +119,13 @@ export class Counter extends Component {
   }
   MobileApp() {
     return (
-      <div className="primary-grid">
+      <div className="counter-primary">
         <div className="description">
           <a
             target="_blank"
+            rel="noopener noreferrer"
             href="https://github.com/royclaudio"
-            className="display-name"
+            className="c-title"
           >
             Film Finder
           </a>
@@ -139,15 +144,51 @@ export class Counter extends Component {
       </div>
     );
   }
+  certs() {
+    var cert = [];
+    return (
+      <div className="counter-primary">
+        <div className="description">
+          <p className="c-title"> Certifications</p>
+          <li>
+            <lu>
+              React & Django Full Stack: web app, backend API, mobile apps
+            </lu>
+          </li>
+          <li>
+            <lu>The Advanced SQL Course</lu>
+          </li>
+          <li>
+            <lu>MS SQL Server: Learn MS SQL Server from Scratch</lu>
+          </li>
+          <li>
+            <lu>Advanced Database Design For a Relational DB w/ MySQL</lu>
+          </li>
+          <li>
+            <lu>Advanced SQL: MySQL Data Analysis & Business Intelligence</lu>
+          </li>
+          <li>
+            <lu>SQL Server : The complete course about BACKUP and RESTORE.</lu>
+          </li>
+          <li>
+            <lu>Complete ASP.NET Core and Entity Framework Development</lu>
+          </li>
+        </div>
+      </div>
+    );
+  }
   render() {
     return (
-      <div className="home-primary">
-        <h1 className="counter-header">Personal Projects</h1>
-        <this.arduino />
-        <this.CollegeSource />
-        <this.Homeless1 />
-        <this.Homeless2 />
-        <this.MobileApp />
+      <div>
+        <h1 className="c-title">Personal Projects</h1>
+        <div className="c-grid-home">
+          <this.arduino />
+          <this.CollegeSource />
+          <this.Homeless1 />
+          <this.Homeless2 />
+          <this.MobileApp />
+          <this.certs />
+        </div>
       </div>
     );
   }

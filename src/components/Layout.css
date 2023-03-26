@@ -1,18 +1,26 @@
 .main-layout {
   min-height: 100vh;
   min-height: 100dvh;
-  /* background-color: rgb(221, 16, 16); */
-  background-color: #6db966;
+  /* background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;  
+  background-image: url("./sandias.jpg"); */
+  background-image: linear-gradient(
+    to bottom,
+    rgb(172, 212, 251)  0%,
+    rgb(146, 198, 251)  50%,
+    rgb(69, 161, 255) 100%
+  );;
   display: grid;
   grid-template-rows: auto 1fr auto;
 }
-.style-body {
-  background-color: white;
+.style-body{
+
 }
 .footer-style {
   display: flex;
   justify-content: center;
-  height: 40px;
   padding: 5px;
   background-color: #45a1ff;
   color: white;

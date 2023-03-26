@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import "./Home.css";
 import InfoContainer from "./InfoContainer";
-import { InfoButton } from "./InfoButton";
 import csv from "./Shelterinfo.csv";
 import Papa from "papaparse";
 
@@ -15,7 +14,6 @@ export class Home extends Component {
       loading: true,
       selections: null,
       checkedItems: new Set(),
-      maincontent: null,
     };
     this.handleClick = this.handleClick.bind(this);
   }
@@ -41,8 +39,6 @@ export class Home extends Component {
         });
       },
     });
-    {
-    }
   }
 
   renderitems(items) {
@@ -67,8 +63,9 @@ export class Home extends Component {
     return (
       <div className="selector">
         {items.map((item, i) => (
-          <label key={i}>
+          <label className="checkbox-title" key={i}>
             <input
+              className="checkbox-title"
               type="checkbox"
               id={item}
               name={item}
@@ -123,12 +120,17 @@ export class Home extends Component {
     this.currentcontent = content;
     this.setState({ maincontent: this.renderitems(this.currentcontent) });
   }
+  maincontent1() {
+    this.setState({ primarycontent: this.renderitems(this.currentcontent) });
+  }
   render() {
     let contents =
       (this.count == null) | (this.count == 0) ? (
         <div className="content">
-          <p>Please select an option to continue.</p>
-          <img style={{ height: 390, width: "95%" }} src="loading.gif"></img>
+          <p style={{ backgroundColor: "grey" }}>
+            Please select an option to continue.
+          </p>
+          <img style={{ height: 390, width: "90%" }} src="whale.gif"></img>
         </div>
       ) : (
         <div className="content">
@@ -137,32 +139,33 @@ export class Home extends Component {
         </div>
       );
     let selectservice = this.state.loading ? (
-      <img className="show-img1" src="whale.gif"></img>
+      <img style={{ height: 390, width: "90%" }} src="whale.gif"></img>
     ) : (
       this.renderselections(this.state.selections, this.handleClick)
     );
-
-    return (
-      <div>
-        <div className="">
-          <h1 className="home_title">Community Services</h1>
-        </div>
-        <div className="home-content">
-          <div className="sidebar">
-            <div className="selector-info">
-              <h2 className="title">Select Service</h2>
-              {selectservice}
-              <button className="button" onClick={() => this.btnpressed(1)}>
-                All
-              </button>
-              <button className="button" onClick={() => this.btnpressed(0)}>
-                Nothing
-              </button>
-            </div>
+    let content = (
+      <div className="home-content">
+        <div className="sidebar">
+          <div className="selector-info">
+            <h1 className="service-title">Select Community Service</h1>
+            {selectservice}
+            <button
+              className="service-button"
+              onClick={() => this.btnpressed(1)}
+            >
+              All
+            </button>
+            <button
+              className="service-button"
+              onClick={() => this.btnpressed(0)}
+            >
+              Nothing
+            </button>
           </div>
-          {contents}
         </div>
+        {contents}
       </div>
     );
+    return <div>{content}</div>;
   }
 }
