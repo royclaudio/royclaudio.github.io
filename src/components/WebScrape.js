@@ -17,7 +17,7 @@ export class WebScrape extends Component {
       <div>
         <div className="">
           <h1 className="home_title">Web Scraping project</h1>
-          <h1 className="home_title">Comming soon</h1>
+          <h1 className="home_title">Coming soon</h1>
         </div>
         <div className="home-content">
           <img style={{ height: 390, width: "95%" }} src="whale.gif"></img>

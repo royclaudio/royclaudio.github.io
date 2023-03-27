@@ -13,7 +13,6 @@
   font-family: 'Times New Roman', Times, serif;
    /* 1 pixel black shadow to left, top, right and bottom */
    text-shadow: 0 0 5px rgb(247, 247, 247), 0 0 5px rgb(222, 222, 222);
-
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }

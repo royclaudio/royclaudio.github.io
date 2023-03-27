@@ -127,9 +127,29 @@ export class Home extends Component {
     let contents =
       (this.count == null) | (this.count == 0) ? (
         <div className="content">
-          <p style={{ backgroundColor: "grey" }}>
+          <p style={{ textTransform: "uppercase", color: "white" }}>
             Please select an option to continue.
           </p>
+
+          <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
+            <a
+              href="https://soundcloud.com/lofi-hip-hop-music"
+              title="𝗟𝗢𝗙𝗜"
+              target="_blank"
+              style="color: #cccccc; text-decoration: none;"
+            >
+              𝗟𝗢𝗙𝗜
+            </a>{" "}
+            ·{" "}
+            <a
+              href="https://soundcloud.com/lofi-hip-hop-music/sets/lofi-hip-hop-beats"
+              title="𝗟𝗢𝗙𝗜"
+              target="_blank"
+              style="color: #cccccc; text-decoration: none;"
+            >
+              𝗟𝗢𝗙𝗜
+            </a>
+          </div>
           <img style={{ height: 390, width: "90%" }} src="whale.gif"></img>
         </div>
       ) : (

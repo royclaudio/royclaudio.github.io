@@ -34,10 +34,10 @@ export class NavMenu extends Component {
             Web Scraping
           </a>
           <a target="_blank" href="/counter">
-            Past Projects
+            Portfolio
           </a>
 
-          <div className="links">
+          {/* <div className="links">
             <a>Resources</a>
             <span className="popuptext">
               <a
@@ -55,7 +55,7 @@ export class NavMenu extends Component {
                 US |&nbsp;Public Housing
               </a>
             </span>
-          </div>
+          </div> */}
         </nav>
       </header>
     );

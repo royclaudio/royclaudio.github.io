@@ -11,16 +11,16 @@ export class Layout extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      content: <Home />,
+      content: <Counter />,
     };
   }
   contentSet(pick) {
     if (pick === 1) {
-      this.setState({ content: <Home /> });
-    } else if (pick === 2) {
-      this.setState({ content: <WebScrape /> });
-    } else if (pick === 3) {
       this.setState({ content: <Counter /> });
+    } else if (pick === 2) {
+      this.setState({ content: <Home /> });
+    } else if (pick === 3) {
+      this.setState({ content: <WebScrape /> });
     } else if (pick === 4) {
       this.setState({ content: <Game /> });
     }
@@ -28,8 +28,8 @@ export class Layout extends Component {
   render() {
     return (
       <div className="main-layout">
-        <header className="primary">
-          <div className="primary-header">
+        <header className="newMenu">
+          <nav>
             <a
               target="_blank"
               rel="noopener noreferrer"
@@ -38,28 +38,13 @@ export class Layout extends Component {
             >
               Roy Claudio
             </a>
-          </div>
-
-          <nav className="navMenu">
-            <a onClick={() => this.contentSet(1)}>Home</a>
-            <a onClick={() => this.contentSet(3)}>Past Projects</a>
-            <a onClick={() => this.contentSet(4)}>Shooter Game</a>
-
+            <a onClick={() => this.contentSet(1)}>Portfolio</a>
+            <a onClick={() => this.contentSet(2)}>Community Project</a>
             <div className="links">
-              <a>Resource Links</a>
+              <a>Continuous Projects </a>
               <span className="popuptext">
-                <a
-                  target="_blank"
-                  href="https://www.cabq.gov/family/services/homeless-services"
-                >
-                  NM |&nbsp; Resources
-                </a>
-                <a target="_blank" href="https://www.rentassistance.us">
-                  US |&nbsp; Rent Assistance
-                </a>
-                <a target="_blank" href="https://www.publichousing.com">
-                  US |&nbsp;Public Housing
-                </a>
+                <a onClick={() => this.contentSet(4)}>Game</a>
+                <a onClick={() => this.contentSet(3)}>Other</a>
               </span>
             </div>
             <div className="dot"></div>

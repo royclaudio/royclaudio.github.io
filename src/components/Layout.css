@@ -9,14 +9,42 @@
   background-image: linear-gradient(
     to bottom,
     rgb(172, 212, 251)  0%,
-    rgb(146, 198, 251)  50%,
-    rgb(69, 161, 255) 100%
-  );;
+    #1874D2  50%,
+    #1874D2 100%
+  );
   display: grid;
   grid-template-rows: auto 1fr auto;
 }
 .style-body{
 
+}
+.newMenu{
+  background-color: #45a1ff;
+  display: grid;
+  grid-template-columns: auto 1fr 1fr 1fr; 
+}
+.newMenu a{
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 900;
+  display: inline-block;
+  padding: 5px;
+  color: #6e0008;
+  
+   /* 1 pixel black shadow to left, top, right and bottom */
+   text-shadow: 0 0 5px rgb(247, 247, 247), 0 0 5px rgb(222, 222, 222);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.newMenu a:hover{
+  cursor: pointer;
+  color: black;
+ 
+}
+.header__title{
+  font-family: "Cameliya";
+  text-decoration: none;
+  font-weight: 900;
 }
 .footer-style {
   display: flex;

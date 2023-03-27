@@ -7,143 +7,22 @@ export class Counter extends Component {
   constructor(props) {
     super(props);
   }
-  arduino() {
+
+  card(title, desc, img, img1) {
     return (
       <div className="counter-primary">
-        <div className="description">
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://cec.aps.edu/cec-cse#robot"
-            className="c-title"
-          >
-            Arduino Robot
-          </a>
-          <p>
-            This project was developed, during my time at Career Enrichment
-            Center (CEC) in Albuquerque, New Mexico. We started the project by
-            learning the fundamentals of C, and understanding how C connects
-            with the machine code within the Arduino board. With this knowledge,
-            we soldered and connected all of the wires and transistors needed to
-            build the final product.
-          </p>
-        </div>
         <div>
-          <img className="show-img" src="robot.gif"></img>
-          <img className="show-img" src="robot1.gif"></img>
+          <img className="show-img" src={img}></img>
+          <img className="show-img" src={img1}></img>
         </div>
-      </div>
-    );
-  }
-  CollegeSource() {
-    return (
-      <div className="counter-primary">
         <div className="description">
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://appcontest.unm.edu/"
-            className="c-title"
-          >
-            College Source
-          </a>
-          <p>
-            This project was developed, in a month for the UNM App Contest. once
-            logged in, it webscrapped the entire Transcript page, to create a
-            more user friendly user experience, summing the cost, gpa, and
-            showed the percentage to completion of your college career.
-          </p>
-        </div>
-        <div className="gen-grid">
-          <img className="show-img" src="unm.jpg"></img>
-          <img className="show-img" src="csapp.gif"></img>
+          <h1 className="c-title">{title}</h1>
+          <p>{desc}</p>
         </div>
       </div>
     );
   }
-  Homeless1() {
-    return (
-      <div className="counter-primary">
-        <div className="description">
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://github.com/royclaudio"
-            className="c-title"
-          >
-            Homeless Shelter <span>V1</span>
-          </a>
-          <p>
-            This project was developed, The first version was developed with
-            .net Framwork, and MSSQL database. This project was developed, in a
-            month for the UNM App Contest. once logged in, it webscrapped the
-            entire Transcript page, to create a more user friendly user
-            experience, summing the cost, gpa, and showed the percentage to
-            completion of your college career.
-          </p>
-        </div>
-        <div className="gen-grid">
-          <img className="show-img" src="homelessbanners.png"></img>
-          <img className="show-img" src="homeless1.gif"></img>
-        </div>
-      </div>
-    );
-  }
-  Homeless2() {
-    return (
-      <div className="counter-primary">
-        <div className="description">
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://github.com/royclaudio"
-            className="c-title"
-          >
-            Homeless Shelter <span>V2</span>
-          </a>
-          <p>
-            This project was developed, the second was developed in .NET Entiity
-            framework Core, and MSSQL database. This project was developed, in a
-            month for the UNM App Contest. once logged in, it webscrapped the
-            entire Transcript page, to create a more user friendly user
-            experience, summing the cost, gpa, and showed the percentage to
-            completion of your college career.
-          </p>
-        </div>
-        <div className="gen-grid">
-          <img className="show-img" src="net.png"></img>
-          <img className="show-img" src="homeless2.gif"></img>
-        </div>
-      </div>
-    );
-  }
-  MobileApp() {
-    return (
-      <div className="counter-primary">
-        <div className="description">
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://github.com/royclaudio"
-            className="c-title"
-          >
-            Film Finder
-          </a>
-          <p>
-            This project is currently in developement. It provides a 10,000
-            movies, for users to select, and from their selection, using content
-            based filtering AI, it will continue to generate a list of movies
-            that cator to your preferences, using over 15 features, it will find
-            you something to watch.
-          </p>
-        </div>
-        <div className="gen-grid">
-          <img className="show-img" src="ml.jpg"></img>
-          <img className="show-img" src="csapp.gif"></img>
-        </div>
-      </div>
-    );
-  }
+
   certs() {
     var cert = [];
     return (
@@ -178,15 +57,46 @@ export class Counter extends Component {
     );
   }
   render() {
+    let projects = [
+      [
+        "Arduino Robot",
+        "This project was developed, during my time at Career Enrichment Center (CEC) in Albuquerque, New Mexico. We started the project by learning the fundamentals of C, and understanding how C connects with the machine code within the Arduino board. With this knowledge, we soldered and connected all of the wires and transistors needed to build the final product.",
+        "robot.gif",
+        "robot1.gif",
+      ],
+      [
+        "College Source",
+        "This project was developed, in a month for the UNM App Contest. once logged in, it webscrapped the entire Transcript page, to create a more user friendly user experience, summing the cost, gpa, and showed the percentage to completion of your college career.",
+        "unm.jpg",
+        "csapp.gif",
+      ],
+      [
+        "Homeless Shelter V1",
+        "This project was developed, The first version was developed with .net Framwork, and MSSQL database. This project was developed, in a month for the UNM App Contest. once logged in, it webscrapped the entire Transcript page, to create a more user friendly user experience, summing the cost, gpa, and showed the percentage to completion of your college career.",
+        "homelessbanners.png",
+        "homeless1.gif",
+      ],
+      [
+        "Homeless Shelter V2",
+        "This project was developed, the second was developed in .NET Entiity framework Core, and MSSQL database. This project was developed, in a month for the UNM App Contest. once logged in, it webscrapped the entire Transcript page, to create a more user friendly user experience, summing the cost, gpa, and showed the percentage to completion of your college career.",
+        "net.png",
+        "homeless2.gif",
+      ],
+      [
+        "Film Finder",
+        "This project is currently in developement. It provides a 10,000 movies, for users to select, and from their selection, using content based filtering AI, it will continue to generate a list of movies that cator to your preferences, using over 15 features, it will find you something to watch.",
+        "ml.jpg",
+        "unm.jpg",
+      ],
+    ];
+
     return (
       <div>
         <h1 className="c-title">Personal Projects</h1>
         <div className="c-grid-home">
-          <this.arduino />
-          <this.CollegeSource />
-          <this.Homeless1 />
-          <this.Homeless2 />
-          <this.MobileApp />
+          {projects.map((item) =>
+            this.card(item[0], item[1], item[2], item[3])
+          )}
           <this.certs />
         </div>
       </div>
